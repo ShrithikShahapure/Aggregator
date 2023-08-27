@@ -1,9 +1,9 @@
 <!-- 
 Ok so a lot of work is needed to be done.
     1.logo on right to be replaced with profile pic.
-    2,buttons will require javascript to take to forward to respected sites
+    2,buttons will require javascript to take to forward to respected sites; Done
     3.there needs to ne a heading and caption in the middle of page in between pics.
-    4.Need to add a better font.
+    4.Need to add a better font- DM Sans or one on resume; Done
     5.Buttons need new functionality.
         -  Placeholder for photo
         -  Text to be aligned in center.
@@ -18,6 +18,7 @@ Ok so a lot of work is needed to be done.
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="Logo.png" type="image/x-icon">
 <style>
   body {
     margin: 0;
@@ -67,6 +68,7 @@ Ok so a lot of work is needed to be done.
   }
   
   .button {
+  font-family: 'DM Sans', sans-serif;
   display: flex;
   justify-content: center; /* Horizontally center-aligns the content */
   align-items: center; /* Vertically center-aligns the content */
@@ -92,17 +94,44 @@ Ok so a lot of work is needed to be done.
       <img class="profile-pic" src="logo.png" alt="Profile Pic">
     </div>
     <div class="button-container">
-      <div class="button">
+      <div class="button" id = "button1">
         Button 1
       </div>
-      <div class="button">
+      <div class="button" id = "button2">
         Button 2
       </div>
-      <div class="button">
+      <div class="button" id = "button3">
         Button 3
       </div>
     </div>
   </div>
+
+  <script>
+    // Get references to the buttons
+    var button1 = document.getElementById("button1");
+    var button2 = document.getElementById("button2");
+    var button3 = document.getElementById("button3");
+    // Define the URLs for the links
+    var link1 = "https://www.linkedin.com/in/shrithik-shahapure/";
+    var link2 = "https://github.com/ShrithikShahapure";
+    var link3 = "https://resume.shrithik.cloud";
+    // Add click event listeners to the buttons
+    button1.addEventListener("click", function() {
+        window.open(link1, "_blank");
+    });
+
+    button2.addEventListener("click", function() {
+        window.open(link2, "_blank");
+    });
+
+    button3.addEventListener("click", function() {
+        window.open(link3, "_blank");
+    });
+</script>
+
+</body>
+</html>
+
 </body>
 </html>
 
